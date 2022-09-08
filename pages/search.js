@@ -6,7 +6,7 @@ import Response from "../Response";
 import SearchResults from "../Components/SearchResults";
 import ImageResults from "../Components/ImageResults";
 
-export default function search({ results }) {
+export default function Search({ results }) {
   console.log(results);
   const router = useRouter();
   return (
