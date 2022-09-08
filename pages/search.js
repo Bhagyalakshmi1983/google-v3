@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import SearchHeader from "../Components/searchHeader";
+import SearchHeader from "../Components/SearchHeader";
 import Response from "../Response";
 import SearchResults from "../Components/SearchResults";
 import ImageResults from "../Components/ImageResults";
