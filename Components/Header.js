@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 export default function Header() {
   const router = useRouter();
   return (
-    <header className="flex justify-between p-5 text-sm text-gray-700">
+    <header className="flex justify-between p-5 text-sm text-gray-700 space-x-4">
       <div className="flex space-x-4 items-center">
         <Link href="https://about.google/">
         <a className="link">About</a>
@@ -21,10 +21,7 @@ export default function Header() {
         <a className="link">Gmail</a>
         </Link>
 
-
           <a onClick={()=>router.push(`/search?term=${router.query.term || "google"}&searchType=image`) } className="link">Images</a>
-
-
         <User/>
 </div>
     </header>

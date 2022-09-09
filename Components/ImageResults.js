@@ -10,16 +10,11 @@ export default function ImageResults({ results }) {
           <div key={result.link} className="mb-8">
             <div className="group">
               <a href={result.image.contextLink}>
-                {
-                  result.link && (
-                    <img
-                      className="group-hover:shadow-xl w-full h-60 object-contain"
-                      src={result.link}
-                      alt={result.title || 'no Image'}
-                    />
-
-                  )
-                }
+                <img
+                  className="group-hover:shadow-xl w-full h-60 object-contain"
+                  src={result.link}
+                  alt={result.title}
+                />
               </a>
               <a className="group-hover:underline" href={result.image.contextLink}>
                 <h2 className="truncate text-xl">{result.title}</h2>

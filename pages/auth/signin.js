@@ -3,7 +3,7 @@ import Header from "../../Components/Header";
 import {getProviders,signIn} from "next-auth/react"
 
 export default function signin({ providers }) {
-
+  console.log('file: signin.js ~ line 6 ~ signin ~ providers', providers);
   return (
     <>
       <Header />
@@ -14,7 +14,8 @@ export default function signin({ providers }) {
               className="w-52 object-cover"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="google-logo" />
             <p className="text-sm italic my-10 text-center">This website is created for learning purposes</p>
-            <button className="bg-red-400 rounded-lg text-white p-3 hover:bg-red-600"onClick={()=>signIn(provider.id,{callbackUrl:"/"})}>Sign in with {provider.name}</button>
+            <button className="bg-red-400 rounded-lg text-white p-3 hover:bg-red-600"
+              onClick={() => signIn(provider.id, { callbackUrl: "/" })}>Sign in with {provider.name}</button>
   </div>
 ))}
       </div>

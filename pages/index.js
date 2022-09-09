@@ -13,12 +13,12 @@ export default function Home() {
   function Search(event) {
     event.preventDefault();
     const term = searchInputRef.current.value;
-      
+
     if (!term.trim()) return;
     router.push(`\search?term=${term.trim}&searchType=`);
   }
   async function randomSearch(event) {
-    console.log("randomSearch")
+   
     event.preventDefault();
     const randomTerm = await fetch("https://random-word-api.herokuapp.com/word?number=1")
       .then((response) => response.json());
